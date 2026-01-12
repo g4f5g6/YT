@@ -20,7 +20,7 @@ COPY package* .json./
 RUN npm install
 
 # AQUÍ TAMBIÉN: Hay un espacio entre el primer punto y el segundo punto
-COPY. .
+COPY . .
 
 EXPOSE 3000
 CMD ["node", "index.js"]
