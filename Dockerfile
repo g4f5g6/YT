@@ -14,13 +14,13 @@ RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o 
 
 WORKDIR /app
 
-# NOTA: Asegúrate de que hay un espacio antes del punto
-COPY package*.json./
+# AQUÍ EL ESPACIO ES VITAL: Entre el asterisco y el punto
+COPY package* .json./
 
 RUN npm install
 
-# NOTA: Asegúrate de que hay un espacio entre los dos puntos
-COPY..
+# AQUÍ TAMBIÉN: Hay un espacio entre el primer punto y el segundo punto
+COPY. .
 
 EXPOSE 3000
 CMD ["node", "index.js"]
